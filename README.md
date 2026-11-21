@@ -1,8 +1,12 @@
 # Customer Churn & Retention Analytics
 
-## Project Overview
+## Live Dashboard
+
+**[Open the Customer Churn & Retention Analytics Dashboard](https://customer-churn-retentions.streamlit.app/)**
 
 An end-to-end data analytics and machine learning project that analyzes customer churn patterns, identifies high-risk customer segments, and predicts the likelihood of customer churn.
+
+## Project Overview
 
 The project combines Python, SQL, machine learning, and an interactive Streamlit dashboard to generate actionable insights that can support customer retention strategies.
 
@@ -76,7 +80,7 @@ The model performance is based on a held-out test dataset. Prediction scores sho
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/Vansh1502/customer-churn-retention.git
 cd customer-churn-retention
 ```
 
@@ -89,7 +93,7 @@ python -m venv .venv
 Activate it on Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
+.\\.venv\\Scripts\\Activate.ps1
 ```
 
 ### 3. Install dependencies
@@ -98,9 +102,9 @@ Activate it on Windows PowerShell:
 pip install -r requirements.txt
 ```
 
-### 4. Configure PostgreSQL
+### 4. Configure PostgreSQL (optional for the dashboard)
 
-Create a `.env` file in the project root with your local database settings:
+For the local data-loading and SQL workflow, create a `.env` file in the project root with your local database settings:
 
 ```env
 DB_HOST=127.0.0.1
@@ -110,15 +114,15 @@ DB_USER=your_database_user
 DB_PASSWORD=your_database_password
 ```
 
-Do not commit `.env` or database credentials to GitHub.
+Do not commit `.env` or database credentials to GitHub. The deployed Streamlit dashboard uses the project's included data and model files and does not require your local PostgreSQL credentials.
 
-### 5. Run the Streamlit dashboard
+### 5. Run the Streamlit dashboard locally
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-The dashboard will open in your browser.
+The dashboard will open in your browser. Alternatively, use the [live dashboard](https://customer-churn-retentions.streamlit.app/).
 
 ## Testing
 
