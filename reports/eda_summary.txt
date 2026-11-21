@@ -1,0 +1,54 @@
+CUSTOMER CHURN & RETENTION ANALYTICS
+==================================================
+
+Total customers: 7043
+Churned customers: 1869
+Overall churn rate: 26.54%
+
+CHURN BY CONTRACT
+----------------------------------------
+Contract
+Month-to-month    42.71
+One year          11.27
+Two year           2.83
+
+CHURN BY GENDER
+----------------------------------------
+gender
+Female    26.92
+Male      26.16
+
+CHURN BY SENIORCITIZEN
+----------------------------------------
+SeniorCitizen
+1    41.68
+0    23.61
+
+CHURN BY INTERNETSERVICE
+----------------------------------------
+InternetService
+Fiber optic    41.89
+DSL            18.96
+No              7.40
+
+CHURN BY PAYMENTMETHOD
+----------------------------------------
+PaymentMethod
+Electronic check             45.29
+Mailed check                 19.11
+Bank transfer (automatic)    16.71
+Credit card (automatic)      15.24
+
+CHURN BY TENUREGROUP
+----------------------------------------
+TenureGroup
+0-12 months     47.44
+13-24 months    28.71
+25-48 months    20.39
+49-72 months     9.51
+
+AVERAGE MONTHLY CHARGES BY CHURN
+----------------------------------------
+Churn
+No     61.27
+Yes    74.44
