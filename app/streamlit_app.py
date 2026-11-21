@@ -375,22 +375,15 @@ if submitted:
         dtype=int
     )
 
-    # Match the exact training feature columns and order
-    training_features = pd.read_csv(
-        PROJECT_ROOT
-        / "data"
-        / "processed"
-        / "customer_churn_features.csv"
-    ).drop(columns=["Churn"])
-
-    customer_encoded = customer_encoded.reindex(
-        columns=training_features.columns,
-        fill_value=0
-    )
-
-    # Load selected model
+        # Load selected model
     model = joblib.load(
         MODEL_DIR / f"{selected_model}.joblib"
+    )
+
+    # Match the exact training feature columns and order
+    customer_encoded = customer_encoded.reindex(
+        columns=model.feature_names_in_,
+        fill_value=0
     )
 
     prediction = model.predict(customer_encoded)[0]
